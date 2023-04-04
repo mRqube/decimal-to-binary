@@ -1,0 +1,18 @@
+//decimal to binary
+#include<stdio.h>
+int main()
+{
+    int number, convt_number=0, base=1, i, remainder;
+    scanf("%d",&number);
+    printf("\n Binary equivalent of %d ",number);
+    while (number)
+    {
+        remainder = number%2;
+        number = number/2;
+        convt_number += (remainder*base);
+        base= base*10;
+    }
+    printf("%d\n",convt_number);
+    return 0;
+    
+}
